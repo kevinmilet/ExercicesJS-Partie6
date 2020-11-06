@@ -1,7 +1,7 @@
-// let year = 2020;
 for (let year = 2020; year <= 2030; year++){
-//   console.log(document.getElementById('para').innerHTML);
-  x = document.getElementById('para').innerHTML;
-  result = (x + ' ' + year);
-  document.getElementById('para').innerHTML = result;
+  let newDiv = document.createElement('div');
+  let newContent = document.createTextNode(year);
+  newDiv.appendChild(newContent);
+  var currentDiv = document.getElementById('para');
+  document.body.insertBefore(newDiv, currentDiv);
 }
