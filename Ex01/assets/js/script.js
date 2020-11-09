@@ -12,7 +12,7 @@ function isBissextile() {
     let newDiv = document.createElement('div');
 
     // on lui attribue un nouvel id
-    newDiv.id = String('page' + newDivId);
+    newDiv.id = String('' + newDivId);
     let content = document.createTextNode(year);
     newDiv.appendChild(content);
 
@@ -21,7 +21,7 @@ function isBissextile() {
     document.body.insertBefore(newDiv, currentDiv);
 
     // on récupère l'id du nouvel élément pour lui assigner un couleur
-    let yearId = document.getElementById(String('page' + newDivId));
+    let yearId = document.getElementById(String('' + newDivId));
     
     // on teste si l'année est bissectile ou non
     if ((year % 4 === 0 && year % 100 > 0) || (year % 400 === 0)) {
