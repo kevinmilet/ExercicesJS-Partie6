@@ -19,7 +19,7 @@ function isBissextile() {
     // on ajoute le nouvel élément sur la page
     let currentDiv = document.getElementById('div');
     document.body.insertBefore(newDiv, currentDiv);
-
+    
     // on teste si l'année est bissectile ou non
     if ((year % 4 === 0 && year % 100 > 0) || (year % 400 === 0)) {
       document.getElementById(String('' + newDivId)).style.color = 'red';
