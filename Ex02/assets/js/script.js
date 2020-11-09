@@ -10,12 +10,12 @@ for (i = 0; i <= 100; i++) {
   // on récupére les multiples de 15 avec le modulo de i par 15
   let multiple = i % 15;
   
-  // si le modulo est différent de 0 on affiche le nombre
-  if (multiple != 0) {
-    multiDiv.innerHTML = previousContent + i;
-    
-    //sinon on affiche '...'
-  }  else {
+  // si le modulo est égale à 0 on affiche '...'
+  if (multiple == 0 && i != 0) {
     multiDiv.innerHTML = previousContent + '<div>' + '...' + '</div>';
+  
+  //sinon on affiche le nombre
+  }  else {
+    multiDiv.innerHTML = previousContent + '<div>' + i + '</div>';
   }
 }
