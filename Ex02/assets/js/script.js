@@ -1,30 +1,21 @@
-function zeroToHundred() {
-  // déclaration de la variable pour les nouveaux id des nouvelles div
-  let newDivId = 1;
+// on récupére l'id de la div dans une variable
+let multiDiv = document.getElementById('multi');
 
-  for (i = 0; i < 100, i++) {
-    // on crée une nouvelle div
-    let newDiv = document.createElement('div');
+// on boucle tout les nombres de 0 à 100
+for (i = 0; i <= 100; i++) {
 
-    // on lui attribue un nouvel id
-    newDiv.id = String('' + newDivId);
-    let content = document.createTextNode(year);
-    newDiv.appendChild(content);
+  // on récupére le contenu de la précédente div
+  let previousContent = multi.innerHTML;
 
-    // on ajoute le nouvel élément sur la page
-    let currentDiv = document.getElementById('div');
-    document.body.insertBefore(newDiv, currentDiv);
+  // on récupére les multiples de 15 avec le modulo de i par 15
+  let multiple = i % 15;
+  
+  // si le modulo est différent de 0 on affiche le nombre
+  if (multiple != 0) {
+    multiDiv.innerHTML = previousContent + i;
     
-    // on teste si l'année est bissectile ou non
-    if ((year % 4 === 0 && year % 100 > 0) || (year % 400 === 0)) {
-      document.getElementById(String('' + newDivId)).style.color = 'red';
-    } else {
-      document.getElementById(String('' + newDivId)).style.color = 'black';
-    };
-
-    // on ajoute un nouvel id et une nouvelle année, sinon la boucle ne finie jamais
-    i = i + 1;
-    newDivId = newDivId + 1;
-
+    //sinon on affiche '...'
+  }  else {
+    multiDiv.innerHTML = previousContent + '<div>' + '...' + '</div>';
   }
 }
