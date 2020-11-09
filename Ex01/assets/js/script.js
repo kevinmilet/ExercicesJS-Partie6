@@ -30,7 +30,7 @@ function isBissextile() {
       yearId.style.color = 'black';
     };
 
-    // on ajoute un nouvel id et une nouvelle année
+    // on ajoute un nouvel id et une nouvelle année, sinon la boucle ne finie jamais
     year = year + 1;
     newDivId = newDivId + 1;
   }
